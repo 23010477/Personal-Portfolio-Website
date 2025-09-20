@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 :root {
-    --vice: #dc00a2;
+    --vice: #ce0097;
     --gradient-light: linear-gradient(135deg, #74dcff, #ff75ff);
     --gradient-dark: linear-gradient(135deg, #0088b5, #a502a5);
     --text-color: white;
-    --bg-primary: #000050;
+    --bg-primary: #00003f;
     --shadow-color: rgba(230, 246, 255, 0.609);
     --border-radius: 15px;
     background-repeat: no-repeat;
@@ -261,6 +261,39 @@ h3 {
     position: absolute;
     right: 10px;
     bottom: 10px;
+}
+.experience-card {
+    background: var(--vice);
+    border-radius: 10px;
+    min-height: 14em;
+    margin: 10px;
+    padding: 35px;
+    width: 21.25em;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s ease;
+    box-shadow: 5px 5px 10px var(--shadow-color);
+}
+.experience-card:hover {
+    background: var(--gradient-dark);
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px var(--shadow-color);
+}
+.experience-card h3{
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 800;
+    margin: 15px 0;
+}
+.experience-card p{
+    font-size: 1em;
+    line-height: 1.3em;
+    color: var(--text-color);
+}
+.experience-card h4{
+    font-size: 1.3em;
+    font-weight: 700;
+    margin: 15px 0;
 }
 .contact .info h3{
     font-size: 1.3em;
