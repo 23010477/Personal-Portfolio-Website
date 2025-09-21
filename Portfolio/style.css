@@ -2,8 +2,8 @@
 
 :root {
     --vice: #0073d7;
-    --gradient-light: linear-gradient(135deg, #74dcff, #ff75ff);
-    --gradient-dark: linear-gradient(135deg, #0088b5, #a502a5);
+    --gradient-light: linear-gradient(135deg, #58b4ff, #d358ff);
+    --gradient-dark: linear-gradient(135deg, #006fca, #8e00c1);
     --text-color: white;
     --bg-primary: #00003f;
     --shadow-color: rgba(230, 246, 255, 0.609);
@@ -253,6 +253,9 @@ h3 {
     padding: 25px;
     width: 21.25em;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: 0.5s ease;
     box-shadow: 5px 5px 10px var(--shadow-color);
 }
