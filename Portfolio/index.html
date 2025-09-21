@@ -11,14 +11,25 @@
     <!-- header -->
     <header>
             <p class="logo">Saif Eldeen</p>
-            <nav class = "navbar">
-                <a href=""><i class="fa-solid fa-bars menu"></i></a>
-                <a href="#main" class="nav-a">Main</a>
-                <a href="#skills" class="nav-a">Skills</a>
-                <a href="#projects" class="nav-a">Projects</a>
-                <a href="#experience" class="nav-a">Experience</a>
-                <a href="#contact" class="nav-a">Contact</a>
+            <nav class="navbar">
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars" id="sidebarToggle"></i>
+                </div>
+                <div class="nav-links">
+                    <a href="#main" class="nav-a">Main</a>
+                    <a href="#skills" class="nav-a">Skills</a>
+                    <a href="#projects" class="nav-a">Projects</a>
+                    <a href="#experience" class="nav-a">Experience</a>
+                    <a href="#contact" class="nav-a">Contact</a>
+                </div>
             </nav>
+            <div class="sidebar" id="mySidebar">
+                <a href="#main">Main</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
     </header>
     <!-- main -->
     <section class="main" id="main">
@@ -130,5 +141,35 @@
             <a href="https://github.com/23010477" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
     </footer>
+
+    <script>
+        const sidebar = document.getElementById('mySidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+
+        // Initially hide the sidebar
+        sidebar.style.right = '-250px';
+
+        sidebarToggle.addEventListener('click', () => {
+            if (sidebar.style.right === '-250px') {
+                sidebar.style.right = '0';
+            } else {
+                sidebar.style.right = '-250px';
+            }
+        });
+
+        // Close sidebar when clicking on a link
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.style.right = '-250px';
+            });
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.style.right = '-250px';
+            }
+        });
+    </script>
 </body>
 </html>
