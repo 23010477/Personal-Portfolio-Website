@@ -44,9 +44,9 @@ header {
     letter-spacing: 2px;
 }
 
-.navbar {
+.nav {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-a {
@@ -57,13 +57,12 @@ header {
     padding: 8px 16px;
     border-radius: 25px;
     transition: 0.5s ease;
-    position: relative;
 }
 
 .nav-a:hover {
     background: var(--gradient-dark);
     color: white;
-    transform: scale(1.1);
+    transform: translateY(-3px);
 }
 
 .menu-icon {
@@ -431,26 +430,6 @@ h3 {
 
     .menu-icon {
         display: block;
-    }
-
-    .main-btn:hover {
-        transform: none;
-    }
-
-    .project-card:hover {
-        transform: none;
-    }
-
-    .card:hover {
-        transform: none;
-    }
-
-    .experience-card:hover {
-        transform: none;
-    }
-
-    .navbar a:hover {
-        transform: none;
     }
 
     /* Sidebar Container */
