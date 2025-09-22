@@ -420,11 +420,11 @@ h3 {
         padding: 15px 20px;
     }
 
-    .navbar {
+    .nav {
         gap: 15px;
     }
 
-    .nav-links {
+    .nav-a {
         display: none;
     }
 
