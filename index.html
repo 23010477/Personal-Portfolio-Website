@@ -11,19 +11,30 @@
     <!-- header -->
     <header>
             <p class="logo">Saif Eldeen</p>
-            <nav class = "navbar">
-                <a href=""><i class="fa-solid fa-bars menu"></i></a>
-                <a href="#main" class="nav-a">Main</a>
-                <a href="#skills" class="nav-a">Skills</a>
-                <a href="#projects" class="nav-a">Projects</a>
-                <a href="#experience" class="nav-a">Experience</a>
-                <a href="#contact" class="nav-a">Contact</a>
+            <nav class="navbar">
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars" id="sidebarToggle"></i>
+                </div>
+                <div class="nav">
+                    <a href="#main" class="nav-a">Main</a>
+                    <a href="#skills" class="nav-a">Skills</a>
+                    <a href="#projects" class="nav-a">Projects</a>
+                    <a href="#experience" class="nav-a">Experience</a>
+                    <a href="#contact" class="nav-a">Contact</a>
+                </div>
             </nav>
+            <div class="sidebar" id="mySidebar">
+                <a href="#main">Main</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
     </header>
     <!-- main -->
     <section class="main" id="main">
         <div class="main-content">
-            <h2><span class="title">Hello , I'm Saif</span><br><br><span class="sub-title">Software Engineer <br>/ Penetration Tester <br>/ Front-End Developer</span></h2>
+            <h2><span class="title">Hello , I'm Saif</span><br><br><span class="sub-title">Software Engineer<br>/ Cybersecurity Analyst<br>/ Web Developer</span></h2>
             <h3>A Student at Compucommunication Department <br>Faculty of Engineering - Alexandria University</h3>
             <a href="#projects" class="main-btn">View My Work</a>
             <div class="links">
@@ -40,16 +51,23 @@
         <h2 class="title-section">My Skills</h2>
         <div class="cards-container">
             <div class="card">
-                <i class="fa-solid fa-code icon"></i>
                 <h3>Software Engineering</h3>
             </div>
             <div class="card">
-                <i class="fa-brands fa-linux icon"></i>
                 <h3>Cybersecurity</h3>
             </div>
             <div class="card">
-                <i class="fa-solid fa-paperclip icon"></i>
+                <h3>Computer Engineering</h3>
+            </div>
+            <div class="card">
+                
                 <h3>Front-End Web Development</h3>
+            </div>
+            <div class="card">
+                <h3>Back-End Web Development</h3>
+            </div>
+            <div class="card">
+                <h3>Full Stack Web Development</h3>
             </div>
     </section>
     <br>
@@ -60,23 +78,23 @@
             <div class="project-card">
                     <div class="project-info">
                         <h3>Hotel Management System</h3>
-                        <p></p>
+                        <p>A simple yet functional Hotel Management System written in C, allowing users to book, confirm, or cancel room reservations. The system also displays room and guest lists and calculates stay costs. Developed as a team project by five students to demonstrate fundamental concepts of C programming and data management.</p>
                     </div>
-                    <a href="" target="_blank">View</a>
+                    <a href="https://github.com/23010477/hotel-management-system" target="_blank">View</a>
             </div>
             <div class="project-card">
                     <div class="project-info">
-                        <h3>JobFair 2025 Teaser</h3>
-                        <p>this video is a teaser for JobFair 2025</p>
+                        <h3>Spelling Checker Dictionary using AVL Trees</h3>
+                        <p>Spelling Checker using AVL Trees in C. Loads a dictionary and checks user input for correct spelling with suggestions for unknown words.</p>
                     </div>
-                    <a href="" target="_blank">View</a>
+                    <a href="https://github.com/23010477/spelling-word-checker-using-dictionary" target="_blank">View</a>
             </div>
             <div class="project-card">
                     <div class="project-info">
-                        <h3>JobFair 2025 Coverage</h3>
-                        <p>this video is a Full Coverage for JobFair 2025</p>
+                        <h3>Applications on Stack</h3>
+                        <p>A C program demonstrating stack applications: string reversal, balanced parentheses check, infix-to-postfix conversion, and postfix expression evaluation. It illustrates the versatility of stacks in expression parsing and syntax validation.</p>
                     </div>
-                    <a href="" target="_blank">View</a>
+                    <a href="https://github.com/23010477/Apps_On_Stack" target="_blank">View</a>
             </div>
         </div>
     </section>
@@ -84,6 +102,22 @@
     <!-- experience -->
     <section class="experience" id="experience">
         <h2 class="title-section">My Experience</h2>
+        <div class="cards-container">
+            <div class="experience-card">
+                <div class="experience-info">
+                    <h3>intern at IT department at ACPA</h3>
+                    <h4>Aug 2025</h4>
+                    <p>I worked as an intern at the IT department at ACPA, I learned about the company's IT infrastructure and security.</p>
+                </div>
+            </div>
+            <div class="experience-card">
+                <div class="experience-info">
+                    <h3>Video Editor & Content Creator at FPS - el Fath Private School</h3>
+                    <h4>Aug 2023 - Till Now</h4>
+                    <p>I worked as a video editor and content creator at FPS - el Fath Private School, I coverd events and activities for the school's social media platforms.</p>
+                </div>
+            </div>
+        </div>
     </section>
     <br>
     <!-- Contact -->
@@ -102,6 +136,7 @@
                 <div class="info">
                     <h3>Email</h3>
                     <p>engsaifeldeen95@gmail.com</p>
+                </div>
         </div>
     </section>
     <br>
@@ -114,5 +149,35 @@
             <a href="https://github.com/23010477" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
     </footer>
+
+    <script>
+        const sidebar = document.getElementById('mySidebar');
+        const sidebarToggle = document.getElementById('sidebarToggle');
+
+        // Initially hide the sidebar
+        sidebar.style.right = '-250px';
+
+        sidebarToggle.addEventListener('click', () => {
+            if (sidebar.style.right === '-250px') {
+                sidebar.style.right = '0';
+            } else {
+                sidebar.style.right = '-250px';
+            }
+        });
+
+        // Close sidebar when clicking on a link
+        sidebar.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.style.right = '-250px';
+            });
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.style.right = '-250px';
+            }
+        });
+    </script>
 </body>
 </html>
